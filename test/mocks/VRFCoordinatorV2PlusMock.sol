@@ -1,11 +1,12 @@
 // SPDX-License-Identifier: MIT
 // A mock for testing code that relies on VRFCoordinatorV2Plus.
 pragma solidity ^0.8.19;
-import {VRFCoordinatorV2Interface} from "../interfaces/VRFCoordinatorV2Interface.sol";
-import {VRFConsumerBaseV2Plus} from "../dev/VRFConsumerBaseV2Plus.sol";
-import {ConfirmedOwner} from "../../shared/access/ConfirmedOwner.sol";
-import {IVRFCoordinatorV2Plus} from "../dev/interfaces/IVRFCoordinatorV2Plus.sol";
-import {VRFV2PlusClient} from "../dev/libraries/VRFV2PlusClient.sol";
+
+import {VRFCoordinatorV2Interface} from "chainlink/src/v0.8/vrf/interfaces/VRFCoordinatorV2Interface.sol";
+import {VRFConsumerBaseV2Plus} from "chainlink/src/v0.8/vrf/dev/VRFConsumerBaseV2Plus.sol";
+import {ConfirmedOwner} from "chainlink/src/v0.8/shared/access/ConfirmedOwner.sol";
+import {IVRFCoordinatorV2Plus} from "chainlink/src/v0.8/vrf/dev/interfaces/IVRFCoordinatorV2Plus.sol";
+import {VRFV2PlusClient} from "chainlink/src/v0.8/vrf/dev/libraries/VRFV2PlusClient.sol";
 
 // solhint-disable chainlink-solidity/prefix-immutable-variables-with-i
 // solhint-disable gas-custom-errors
