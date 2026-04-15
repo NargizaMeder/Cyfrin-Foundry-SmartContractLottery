@@ -4,7 +4,7 @@ pragma solidity ^0.8.19;
 
 import {Script} from "forge-std/Script.sol";
 import {LinkToken} from "test/mocks/LinkToken.sol";
-import {VRFCoordinatorV2PlusMock} from "chainlink/src/v0.8/vrf/mocks/VRFCoordinatorV2PlusMock.sol";
+import {VRFCoordinatorV2PlusMock} from "../test/mocks/VRFCoordinatorV2PlusMock.sol";
 
 abstract contract CodeConstants {
     /* VRF Mock Values */
@@ -86,7 +86,7 @@ contract HelperConfig is CodeConstants, Script {
             return localNetworkConfig;
         }
 
-        // Declare variables outside the broadcast block so they're in scope after
+    // Declare variables outside the broadcast block so they're in scope after
         VRFCoordinatorV2PlusMock vrfCoordinatorMock;
         LinkToken linkToken;
 

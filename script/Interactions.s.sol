@@ -7,7 +7,7 @@ import {HelperConfig, CodeConstants} from "script/HelperConfig.s.sol";
 import {LinkToken} from "test/mocks/LinkToken.sol";
 import {Raffle} from "../src/Raffle.sol";
 import {DevOpsTools} from "lib/foundry-devops/src/DevOpsTools.sol";
-import {VRFCoordinatorV2PlusMock} from "chainlink/src/v0.8/vrf/mocks/VRFCoordinatorV2PlusMock.sol";
+import {VRFCoordinatorV2PlusMock} from "../test/mocks/VRFCoordinatorV2PlusMock.sol";
 
 contract CreateSubscription is Script, CodeConstants {
     function createSubscriptionUsingConfig() public returns (uint256, address) {

@@ -7,7 +7,7 @@ import {Raffle} from "../../src/Raffle.sol";
 import {CodeConstants} from "script/HelperConfig.s.sol";
 import {LinkToken} from "test/mocks/LinkToken.sol";
 import {Vm} from "forge-std/Vm.sol";
-import {VRFCoordinatorV2PlusMock} from "chainlink/src/v0.8/vrf/mocks/VRFCoordinatorV2PlusMock.sol";
+import {VRFCoordinatorV2PlusMock} from "../test/mocks/VRFCoordinatorV2PlusMock.sol";
 
 contract RaffleTest is Test, CodeConstants {
     Raffle public raffle;
