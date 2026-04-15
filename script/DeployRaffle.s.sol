@@ -29,7 +29,8 @@ contract DeployRaffle is Script {
             console.log("Created subscription ID:", config.subscriptionId);
 
             // Fund the subscription
-            VRFCoordinatorV2PlusMock(config.vrfCoordinator).fundSubscription(config.subscriptionId, uint96(3 ether * 100));
+            VRFCoordinatorV2PlusMock(config.vrfCoordinator)
+                .fundSubscription(config.subscriptionId, uint96(3 ether * 100));
             console.log("Funded subscription");
             vm.stopBroadcast();
         }

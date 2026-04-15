@@ -17,7 +17,6 @@ import {
 // 0x9ddfaca8183c41ad55329bdeed9f6a8d53168b1b => VRFCoordinator
 // 54528670710849503547892655734386820566589065322714869834102560641565075666367 => subId
 contract Raffle is VRFConsumerBaseV2Plus, AutomationCompatibleInterface {
-
     /* ERRORS */
     error Raffle__NotEnoughEthSent();
     error Raffle__TransferFailed();

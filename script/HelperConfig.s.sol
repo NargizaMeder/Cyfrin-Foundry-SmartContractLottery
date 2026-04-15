@@ -86,7 +86,7 @@ contract HelperConfig is CodeConstants, Script {
             return localNetworkConfig;
         }
 
-    // Declare variables outside the broadcast block so they're in scope after
+        // Declare variables outside the broadcast block so they're in scope after
         VRFCoordinatorV2PlusMock vrfCoordinatorMock;
         LinkToken linkToken;
 

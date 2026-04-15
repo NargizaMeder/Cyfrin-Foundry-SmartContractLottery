@@ -229,9 +229,7 @@ contract InteractionTest is Test, CodeConstants {
         // Verify winner is valid
         address winner = raffle.getRecentWinner();
         assert(winner != address(0));
-        assert(
-            winner == PLAYER_ONE || winner == PLAYER_TWO || winner == PLAYER_THREE
-        );
+        assert(winner == PLAYER_ONE || winner == PLAYER_TWO || winner == PLAYER_THREE);
     }
 
     /*//////////////////////////////////////////////////////////////
@@ -266,7 +264,7 @@ contract InteractionTest is Test, CodeConstants {
         // Verify all funds transferred to winner
         assert(address(raffle).balance == 0);
         address actualWinner = raffle.getRecentWinner();
-        
+
         // Winner should have received all entry fees minus their own entry fee
         uint256 expectedWinnerBalance = STARTING_PLAYER_BALANCE + (totalCollected - entranceFee);
         assert(actualWinner.balance == expectedWinnerBalance);
@@ -297,7 +295,7 @@ contract InteractionTest is Test, CodeConstants {
         raffle.performUpkeep("");
         assert(uint256(raffle.getRaffleState()) == 1); // Now CALCULATING
         assert(raffle.getNumberOfPlayers() == 1); // Players not reset yet
-        
+
         Vm.Log[] memory entries = vm.getRecordedLogs();
         bytes32 requestId = entries[1].topics[1];
 

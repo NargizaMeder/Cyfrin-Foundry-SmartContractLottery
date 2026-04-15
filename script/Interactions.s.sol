@@ -37,7 +37,9 @@ contract CreateSubscription is Script, CodeConstants {
 contract FundSubscription is Script, CodeConstants {
     uint256 public constant FUND_AMOUNT = 3 ether;
 
-    function fundSubscription(address vrfCoordinator, uint256 subscriptionId, address linkToken, uint256 deployerKey) public {
+    function fundSubscription(address vrfCoordinator, uint256 subscriptionId, address linkToken, uint256 deployerKey)
+        public
+    {
         console.log("Funding subscription: ", subscriptionId);
         if (block.chainid == LOCAL_CHAIN_ID) {
             // No broadcast here
